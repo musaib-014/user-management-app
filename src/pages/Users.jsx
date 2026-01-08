@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import UserCard from "../components/UserCard";
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -36,7 +37,7 @@ function Users() {
       <h2>Users</h2>
       <ul>
         {users.map((user) => (
-          <li key={user.id}>{user.name}</li>
+          <UserCard key={user.id} user={user} />
         ))}
       </ul>
     </div>

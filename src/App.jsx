@@ -1,5 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Users from "./pages/Users";
+import UserDetails from "./pages/UserDetails";
+
 function App() {
   return (
     <div>
@@ -7,6 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/users" />} />
         <Route path="/users" element={<Users />} />
+        <Route path="/users/:id" element={<UserDetails />} />
       </Routes>
     </div>
   );
